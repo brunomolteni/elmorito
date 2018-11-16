@@ -1,0 +1,445 @@
+*{
+  box-sizing: border-box;
+}
+body, input, textarea{
+  font-family: 'Arbutus Slab', serif;
+  color: #1b1b1b;
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+h1,h2,h3,h4{
+  text-transform: uppercase;
+  font-weight: normal;
+}
+h2{
+  text-align: center;
+  font-size: 2.6rem;
+  transition-duration: .6s;
+  &[data-emergence=hidden] {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  &[data-emergence=visible] {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+a{
+  color: white;
+  text-decoration: none;
+  transition: color .3s ease-out;
+  &:hover{
+    color: #deae53;
+  }
+  &.button{
+    color: #9d6f49;
+    text-transform: uppercase;
+    border: 2px solid #9d6f49;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: color,background-color .3s ease-out;
+    &:hover{
+      background-color: #9d6f49;
+      color: white;
+    }
+  }
+}
+section{
+  min-height: 100vh;
+  padding: 80px 10vw;
+}
+// ---------------------
+// HEADER
+// ---------------------
+header{
+  background-color: black;
+  background-color: rgba(0,0,0,0.6);
+  text-transform: uppercase;
+  font-size: .8rem;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  h1{
+    margin: 0;
+    height: 60px;
+  }
+
+  img{
+    max-height: 60px;
+  }
+
+  a{
+    margin-left: 40px;
+  }
+}
+// ---------------------
+// HOME
+// ---------------------
+#Home{
+  padding: 0;
+  background-color: black;
+  color: white;
+  min-height: 0;
+  position: relative;
+
+  h3{
+    font-size: 2.4rem;
+    margin: 0;
+  }
+
+  p{
+    margin: 5px 0 15px;
+  }
+
+  .glide__slides{
+    margin: 0;
+  }
+
+  .glide__slide{
+    height: 90vh;
+    height: calc(100vh - 80px);
+    background-position: center;
+    background-size: cover;
+    text-align: right;
+    overflow: hidden;
+  }
+
+  .ofrecemos{
+    padding: 30vh 10vw 0;
+    background-image: url('../img/home1-bg.jpg');
+
+    &__text{
+      margin-right: 65%;
+      transition: transform .6s ease-out,opacity .6s ease-in;
+      transform: translateX(-100vw);
+      opacity: 0;
+    }
+
+    .button{
+      color: white;
+      display: inline-block;
+    }
+
+    &.glide__slide--active .ofrecemos__text{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .crianza{
+    padding: 80px 10vw;
+    background-image: url('../img/home2-bg.jpg');
+    position: relative;
+
+    &__text{
+      transition: transform .6s ease-out,opacity .6s ease-out;
+      transition-delay: .3s;
+      background-color: rgba(241, 217, 189,0.8);
+      transform: translateX(100vw);
+      opacity: 0;
+      height: 110%;
+      display: inline-block;
+      padding: 20vh 30vw;
+      width: 100vw;
+      color: black;
+    }
+
+    img{
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      height: 90%;
+      height: calc(100% - 80px);
+      transform: translateX(100vw);
+      transition: transform .6s ease-out;
+    }
+
+    &.glide__slide--active{
+      .crianza__text{
+        transform: translateX(-40vw);
+        opacity: 1;
+      }
+      img{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+// ---------------------
+// CRITERIOS DE SELECCION
+// ---------------------
+#Criterios{
+
+  .glide__slide{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #be954f;
+
+    img{
+      height: 120px;
+      width: auto;
+    }
+  }
+}
+// ---------------------
+// CABALLOS
+// ---------------------
+#Caballos{
+  background-color: #f8f8f8;
+  h2{
+    color: #dfc8a7;
+    margin-bottom: 0;
+  }
+  .caballos{
+    .glide__slide{
+      position: relative;
+      margin-top: 100px;
+      padding-top: 12vw;
+    }
+    &__name{
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+    }
+    &__photo{
+      z-index: 2;
+      position: absolute;
+      max-width: 100%;
+      height: auto;
+      top: 0;
+    }
+    .sans{
+      font-size: 0.8rem;
+    }
+  }
+}
+// ---------------------
+// CREEMOS
+// ---------------------
+#Creemos{
+  text-align: center;
+  color: #e7d5d5;
+  background-image: url('../img/creemos-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  h2{
+    color: #b8977c;
+  }
+  img{
+    max-width: 200px;
+  }
+  p, img{
+    transition-duration: 1s;
+  }
+  &[data-emergence=hidden] p, &[data-emergence=hidden] img{
+    transform: translateY(-50%);
+    opacity: 0
+  }
+  &[data-emergence=visible] p, &[data-emergence=visible] img{
+    transform: translateY(0);
+    opacity: 1
+  }
+  @for $i from 2 through 11 { // Stagger table row transition
+    &[data-emergence=visible] *:nth-child(#{$i}) {
+      transition-delay: #{(.8s * $i) - 1s};
+    }
+  }
+}
+// ---------------------
+// CONTACTO
+// ---------------------
+#Contacto{
+  background-image: url('../img/contacto-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  h2{
+    color: white;
+  }
+
+  form{
+    display: flex;
+    padding-left: 30%;
+    margin-top: 80px;
+    position: relative;
+    transition-duration: .8s;
+    z-index: 1;
+  }
+  fieldset{
+    flex: 1;
+    border: none;
+    padding: 0;
+
+    &:first-of-type{
+      padding-right: 15px;
+    }
+  }
+  input, textarea{
+    width: 100%;
+    border: none;
+    background-color: rgba(157, 111, 73, .2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    height: 40px;
+    display: inline-block;
+
+    &::placeholder{
+      color: rgba(255,255,255,0.6);
+    }
+    &:focus{
+      background-color: rgba(157, 111, 73, .6);
+      outline: none;
+    }
+  }
+  textarea{
+    height: 95px;
+  }
+  input[type=submit]{
+    position: absolute;
+    bottom: -55px;
+    width: 140px;
+    right: 80px;
+    border: 1px solid #9d6f49;
+    cursor: pointer;
+  }
+  img{
+    position: absolute;
+    left: 0;
+    bottom: -10vh;
+    width: 30vw;
+    transition-duration: .6s;
+    z-index: 1;
+  }
+  &:before{
+    content: '';
+    background-color: rgba(241, 217, 189,0.8);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    width: 100vw;
+    transition-duration: .6s;
+  }
+  &[data-emergence=hidden] {
+    form{
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+    img{
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    &:before{
+      transform: translateX(120%);
+    }
+  }
+  &[data-emergence=visible] {
+    form{
+      transform: translateX(0);
+      opacity: 1;
+      transition-delay: .6s;
+    }
+    img{
+      transform: translateX(0);
+      opacity: 1;
+      transition-delay: .3s;
+    }
+  }
+  .gold-bar{
+    left: auto;
+    right: 0;
+    overflow: visible;
+    z-index: 3;
+    top: 50px;
+    bottom: -8px;
+    &[data-emergence=hidden] {
+      transform: translateX(120%);
+    }
+  }
+}
+// ---------------------
+// FOOTER
+// ---------------------
+footer{
+  background-color: #111;
+  background-image: radial-gradient(circle, #1b1b1b,transparent);
+  padding: 40px 10vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div{
+    flex: 1;
+    padding: 0 80px;
+
+    &:last-child{
+      border-left: 2px solid #373737;
+    }
+  }
+  img{
+    float: right;
+  }
+  p{
+    margin: 1em 0;
+    font-size: .6rem;
+  }
+}
+
+// GLIDE
+html body .glide__arrow{
+  border: none;
+  color: rgba(241, 217, 189,0.8);
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 3rem;
+
+  &--left{
+    left: -1em;
+  }
+  &--right{
+    right: -1em;
+  }
+
+  &.--hidden{
+    display: none;
+  }
+}
+
+// UTILS
+.sans{
+  font-family: 'Open Sans', sans-serif;
+}
+.gold-bar{
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 90px;
+  bottom: 30px;
+  width: 40px;
+  background-color: #c5914c;
+  display: block;
+  transition-duration: .6s;
+  transition-delay: .6s;
+
+  &[data-emergence=hidden] {
+    transform: translateX(-120%);
+  }
+  &[data-emergence=visible] {
+    transform: translateX(0);
+  }
+}

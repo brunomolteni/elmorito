@@ -1,0 +1,21 @@
+{
+  "name": "morito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@glidejs/glide": "^3.2.3",
+    "emergence.js": "^1.1.2",
+    "lodash": "^4.17.11",
+    "parcel-bundler": "^1.10.3",
+    "parcel-plugin-imagemin": "^2.1.1",
+    "sass": "^1.14.3"
+  }
+}

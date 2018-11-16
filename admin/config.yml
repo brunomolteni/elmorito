@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "images/uploads"
+collections:
+  - label: "Galeria"
+    name: "galeria"
+    editor:
+      preview: false
+    files:
+      - label: "Fotos"
+        name: "fotos"
+        file: "galeria/fotos.json"
+        fields:
+          - label: Fotos
+            name: fotos
+            widget: list
+            fields:
+              - {label: Titulo, name: title, widget: string}
+              - {label: Foto, name: photo, widget: image}
+      - label: "Videos"
+        name: "videos"
+        file: "galeria/videos.json"
+        fields:
+          - label: Videos
+            name: videos
+            widget: list
+            fields:
+              - {label: Titulo, name: title, widget: string}
+              - {label: URL, name: url, widget: string}
