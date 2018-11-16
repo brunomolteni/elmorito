@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-media_folder: "images/uploads"
+media_folder: "img/uploads"
 collections:
   - label: "Galeria"
     name: "galeria"
@@ -16,8 +16,8 @@ collections:
             name: fotos
             widget: list
             fields:
-              - {label: Titulo, name: title, widget: string}
-              - {label: Foto, name: photo, widget: image}
+              - {label: Descripcion, name: alt, widget: string, hint: "Describir lo que se ve en la foto"}
+              - {label: Foto, name: src, widget: image}
       - label: "Videos"
         name: "videos"
         file: "galeria/videos.json"
