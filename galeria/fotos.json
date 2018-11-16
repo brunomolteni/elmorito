@@ -1,1 +1,16 @@
-{}
+{
+  "fotos": [
+    {
+      "title": "Caballo Saltando",
+      "photo": "/images/uploads/6b5c9185-976b-41ce-8703-98a53a6aaa4e.jpg"
+    },
+    {
+      "title": "Caballo saltando",
+      "photo": "/images/uploads/9c266576-e6d3-433e-a6f6-84120c51e56b.jpg"
+    },
+    {
+      "title": "Caballo Saltando",
+      "photo": "/images/uploads/20b26ed2-98df-496e-813f-46b14d6cf019.jpg"
+    }
+  ]
+}
