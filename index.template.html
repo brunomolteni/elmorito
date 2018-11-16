@@ -199,17 +199,27 @@
         </div>
       </div>
     </section>
-    <section id="Galeria">
+    <section id="Galeria" data-emergence="hidden">
       <h2 data-emergence="hidden">Galería</h2>
-      <div class="glide">
+      <div class="buttons">
+        <a href="#Imagenes" class="button" onclick="show('#Imagenes');return false;">Imagenes</a>
+        <a href="#Testimonios" class="button" onclick="show('#Testimonios');return false;">Testimonios</a>
+        <a href="#Videos" class="button" onclick="show('#Videos');return false;">Videos</a>
+      </div>
+      <div class="glide active" id="Imagenes">
         <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides galeria"><galeria/>
+          <ul class="glide__slides fotos"><fotos/>
           </ul>
         </div>
-        <div class="glide__arrows" data-glide-el="controls">
-         <button class="glide__arrow glide__arrow--left sans --hidden" data-glide-dir="<">❮</button>
-         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
+      </div>
+      <div class="glide" id="Videos">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides videos"><videos/>
+          </ul>
         </div>
+      </div>
+      <div class="" id="Testimonios">
+
       </div>
     </section>
     <section id="Creemos" data-emergence="hidden">

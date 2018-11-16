@@ -47,9 +47,22 @@ caballos.on('move', () => {
   toggleArrows(caballos.index,4,"#Caballos")
 })
 
-var galeria = new Glide('#Galeria .glide',{type: 'carousel', perView: 3, focusAt: 'center', peek: 200, gap: 20}).mount();
+var galeria;
+window.show = selector => {
+  $('.active').classList.remove('active');
+  $(selector).classList.add('active');
+  if(galeria) galeria.disable();
+  if(selector !== '#Testimonios') galeria = new Glide(selector,{type: 'carousel', perView: 3, focusAt: 'center', peek: 200, gap: 20}).mount();
+}
+show('#Imagenes');
 
-window.lightbox = e => {
+window.openImage = e => {
   const instance = basicLightbox.create(e.innerHTML);
+  instance.show();
+}
+
+window.openVideo = id => {
+  let frame = `<iframe width="1024" height="576" src="https://www.youtube.com/embed/${id}?autoplay=1"></iframe>`;
+  const instance = basicLightbox.create(frame);
   instance.show();
 }
