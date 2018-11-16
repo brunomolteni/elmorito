@@ -1,12 +1,16 @@
 {
   "videos": [
     {
-      "title": "curtis Blue",
+      "title": "Curtis Blue",
       "url": " https://www.youtube.com/watch?v=Cjzb6VKYHi8&feature=youtu.be"
     },
     {
       "title": "Rey Momo",
       "url": "https://www.youtube.com/watch?v=OCicHf_7cDg&feature=youtu.be"
+    },
+    {
+      "title": "BlueSea",
+      "url": "https://youtu.be/O0CR7LMs0z8"
     }
   ]
 }
