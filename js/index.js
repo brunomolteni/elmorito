@@ -1,9 +1,12 @@
 import "../css/styles.scss";
 import "../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
 import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss";
-import Glide from '@glidejs/glide';
-import initEmergence from 'emergence.js';
+import "../node_modules/basiclightbox/src/styles/main.scss";
+
+import Glide from '@glidejs/glide'; // https://glidejs.com/docs/setup
+import initEmergence from 'emergence.js'; // https://github.com/xtianmiller/emergence.js ANIMACIONES
 import debounce from 'lodash/debounce';
+import * as basicLightbox from 'basiclightbox' // https://basiclightbox.electerious.com/
 
 var emergence = initEmergence(this);
 
@@ -13,8 +16,11 @@ function $(selector){
   return document.querySelector(selector);
 }
 
+function $$(selector){
+  return document.querySelectorAll(selector);
+}
+
 const toggleArrows = debounce((index,lastIndex,selector)=>{
-  console.log(index);
   if(index === lastIndex ){
     $(selector+' .glide__arrow--right').classList.add('--hidden');
     $(selector+' .glide__arrow--left').classList.remove('--hidden');
@@ -40,7 +46,10 @@ var caballos = new Glide('#Caballos .glide',{perView: 5, bound: true, rewind: fa
 caballos.on('move', () => {
   toggleArrows(caballos.index,4,"#Caballos")
 })
-// https://github.com/xtianmiller/emergence.js ANIMACIONES
-// https://glidejs.com/docs/setup SLIDER
-// https://typeitjs.com/ typewriter
-// https://medium.com/@filipvitas/tree-shake-lodash-with-parcel-js-48543941f53a tree shaking
+
+var galeria = new Glide('#Galeria .glide',{type: 'carousel', perView: 3, focusAt: 'center', peek: 200, gap: 20}).mount();
+
+window.lightbox = e => {
+  const instance = basicLightbox.create(e.innerHTML);
+  instance.show();
+}

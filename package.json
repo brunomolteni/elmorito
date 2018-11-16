@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html --experimental-scope-hoisting && cpy admin/* dist/admin"
+    "start": "git pull && node render && parcel index.html --open",
+    "build": "node render && parcel build index.html --experimental-scope-hoisting && cpy admin/* dist/admin"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@glidejs/glide": "^3.2.3",
+    "basiclightbox": "^5.0.1",
     "cpy-cli": "^2.0.0",
     "emergence.js": "^1.1.2",
     "lodash": "^4.17.11",
