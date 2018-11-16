@@ -244,16 +244,12 @@ header{
   }
   &[data-emergence=hidden] p, &[data-emergence=hidden] img{
     transform: translateY(-50%);
-    opacity: 0
+    opacity: 0;
   }
   &[data-emergence=visible] p, &[data-emergence=visible] img{
     transform: translateY(0);
-    opacity: 1
-  }
-  @for $i from 2 through 11 { // Stagger table row transition
-    &[data-emergence=visible] *:nth-child(#{$i}) {
-      transition-delay: #{(.8s * $i) - 1s};
-    }
+    opacity: 1;
+    transition-delay: .5s;
   }
 }
 // ---------------------
