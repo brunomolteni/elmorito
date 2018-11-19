@@ -12,12 +12,14 @@
   "license": "ISC",
   "devDependencies": {
     "@glidejs/glide": "^3.2.3",
+    "autoprefixer": "^9.3.1",
     "basiclightbox": "^5.0.1",
     "cpy-cli": "^2.0.0",
     "emergence.js": "^1.1.2",
     "lodash": "^4.17.11",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-imagemin": "^2.1.1",
+    "plyr": "^3.4.7",
     "sass": "^1.14.3"
   }
 }

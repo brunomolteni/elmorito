@@ -17,6 +17,9 @@
         <a href="#Contacto">Contacto</a>
       </nav>
     </header>
+    <!--
+    HOME
+    -->
     <section id="Home">
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
@@ -35,7 +38,9 @@
               </div>
               <img src="./img/home2.png" alt="Crianza a campo">
             </li>
-            <li class="glide__slide galeria">2</li>
+            <li class="glide__slide galeria">
+
+            </li>
           </ul>
         </div>
         <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -46,9 +51,12 @@
       </div>
       <hr class="gold-bar" data-emergence="hidden"/>
     </section>
-    <section id="Criterios">
-      <h2 data-emergence="hidden">Criterios de selección</h2>
-      <div class="glide">
+    <!--
+    CRITERIOS
+    -->
+    <section id="Criterios" data-emergence="hidden">
+      <h2 class="fade-in">Criterios de selección</h2>
+      <div class="glide fade-in delay-1">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <li class="glide__slide">
@@ -87,9 +95,12 @@
         </div>
       </div>
     </section>
-    <section id="Caballos">
-      <h2 data-emergence="hidden">Caballos en Competencia</h2>
-      <div class="glide">
+    <!--
+    CABALLOS
+    -->
+    <section id="Caballos" data-emergence="hidden">
+      <h2 class="fade-in">Caballos en Competencia</h2>
+      <div class="glide fade-in delay-1">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides caballos">
             <li class="glide__slide">
@@ -199,17 +210,24 @@
         </div>
       </div>
     </section>
+    <!--
+    GALERIA
+    -->
     <section id="Galeria" data-emergence="hidden">
-      <h2 data-emergence="hidden">Galería</h2>
-      <div class="buttons">
+      <h2 class="fade-in">Galería</h2>
+      <div class="buttons fade-in delay-1">
         <a href="#Imagenes" class="button" onclick="show('#Imagenes');return false;">Imagenes</a>
         <a href="#Testimonios" class="button" onclick="show('#Testimonios');return false;">Testimonios</a>
         <a href="#Videos" class="button" onclick="show('#Videos');return false;">Videos</a>
       </div>
-      <div class="glide active" id="Imagenes">
+      <div class="glide active fade-in delay-2" id="Imagenes">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides fotos"><fotos/>
           </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+         <button class="glide__arrow glide__arrow--left sans" data-glide-dir="<">❮</button>
+         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
         </div>
       </div>
       <div class="glide" id="Videos">
@@ -217,27 +235,55 @@
           <ul class="glide__slides videos"><videos/>
           </ul>
         </div>
+        <div class="glide__arrows" data-glide-el="controls">
+         <button class="glide__arrow glide__arrow--left sans" data-glide-dir="<">❮</button>
+         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
+        </div>
       </div>
       <div class="" id="Testimonios">
-
+        <div class="testimonio">
+          <img src="/img/maria.png" alt="foto de María Jesus Montone">
+          <h4>María Jesus Montone</h4>
+          <q>He entrenado varios caballos de la cria de Isidro Lamarca y paso a hacer una breve reseña del método de entrenamiento para llegar a un caballo de salto de exportación.</q>
+          <audio controls class="plyr">
+            <source src="/mp3/maria.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="testimonio">
+          <img src="/img/manuel.png" alt="foto de Manuel Montes de Oca">
+          <h4>Manuel Montes de Oca</h4>
+          <q>Hemos aprendido que hay que entrar en una relación con el caballo. Y aprender del respeto, la comprensión, y la confianza mutua para lograr buenos resultados en la doma.</q>
+          <audio controls class="plyr">
+            <source src="/mp3/manuel.mp3" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
     </section>
+    <!--
+    CREEMOS
+    -->
     <section id="Creemos" data-emergence="hidden">
-      <h2 data-emergence="hidden">Creemos</h2>
-      <p>En un caballo confiable. Ideal para el jinete amateur que formará
-      un binomio con su caballo, aclanzando juntos los resultados buscados.</p>
-      <img src="./img/para-esto.png" alt="Para Esto...">
-      <p>Una doma racional y sin violencia.</p>
-      <p>Tener una confianza mútua da excelentes resultados.</p>
-      <p>La enseñanza por entendimiento y convicción da resultados duraderos.</p>
-      <br>
-      <p>La presión contínua desanima y flagela. </p>
-      <p>Continuidad en la enseñanza ligando la doma con el posterior entrenamiento.</p>
-      <br>
-      <p>Creemos en un “Caballo Amigo”.</p>
+      <h2 class="fade-in">Creemos</h2>
+      <div class="fade-in delay-1">
+        <p>En un caballo confiable. Ideal para el jinete amateur que formará un binomio con su caballo, aclanzando juntos los resultados buscados.</p>
+        <img src="./img/para-esto.png" alt="Para Esto...">
+      </div>
+      <div class="fade-in delay-2">
+        <p>Una doma racional y sin violencia.</p>
+        <p>Tener una confianza mútua da excelentes resultados.</p>
+        <p>La enseñanza por entendimiento y convicción da resultados duraderos.</p>
+        <br>
+        <p>La presión contínua desanima y flagela. </p>
+        <p>Continuidad en la enseñanza ligando la doma con el posterior entrenamiento.</p>
+        <br>
+        <p>Creemos en un “Caballo Amigo”.</p>
+      </div>
     </section>
+    <!--
+    CONTACTO
+    -->
     <section id="Contacto" data-emergence="hidden">
-      <h2 data-emergence="hidden">Contacto</h2>
+      <h2 class="fade-in">Contacto</h2>
       <form name="contact" method="POST" netlify>
         <fieldset>
           <input type="text" name="nombre" placeholder="Nombre y Apellido">
@@ -253,6 +299,9 @@
       <img src="./img/contacto.png" alt="Contacto">
       <hr class="gold-bar" data-emergence="hidden"/>
     </section>
+    <!--
+    FOOTER
+    -->
     <footer>
       <div>
         <img src="./img/logo.png" alt="El Morito">

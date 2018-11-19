@@ -2,13 +2,17 @@ import "../css/styles.scss";
 import "../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
 import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss";
 import "../node_modules/basiclightbox/src/styles/main.scss";
+import "../node_modules/plyr/dist/plyr.css"
 
 import Glide from '@glidejs/glide'; // https://glidejs.com/docs/setup
 import initEmergence from 'emergence.js'; // https://github.com/xtianmiller/emergence.js ANIMACIONES
 import debounce from 'lodash/debounce';
 import * as basicLightbox from 'basiclightbox' // https://basiclightbox.electerious.com/
+import Plyr from 'plyr';
 
-var emergence = initEmergence(this);
+const players = Plyr.setup('.plyr',{controls: ['play', 'progress']});
+
+const emergence = initEmergence(this);
 
 emergence.init();
 
