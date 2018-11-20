@@ -1,14 +1,15 @@
 import "../css/styles.scss";
-import "../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
-import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss";
+import "../css/ui.scss";
 import "../node_modules/basiclightbox/src/styles/main.scss";
 import "../node_modules/plyr/dist/plyr.css"
+import "../node_modules/tiny-slider/src/tiny-slider.scss";
 
-import Glide from '@glidejs/glide'; // https://glidejs.com/docs/setup
 import initEmergence from 'emergence.js'; // https://github.com/xtianmiller/emergence.js ANIMACIONES
-import debounce from 'lodash/debounce';
 import * as basicLightbox from 'basiclightbox' // https://basiclightbox.electerious.com/
 import Plyr from 'plyr';
+import { tns } from 'tiny-slider';
+
+const sliderOptions = {controlsText: ['❮','❯'],"mouseDrag": true,"swipeAngle": false, controlsPosition: "bottom"};
 
 const players = Plyr.setup('.plyr',{controls: ['play', 'progress']});
 
@@ -16,49 +17,24 @@ const emergence = initEmergence(this);
 
 emergence.init();
 
+const subHome = tns({...sliderOptions, container: '#Home .sub-slider', items: 1, nav: false, mouseDrag: false, nested: 'inner'});
+const home = tns({...sliderOptions, container: '#Home .slider', items: 1, controls: false, mouseDrag: false, autoplay: true, autoplayButtonOutput: false, nested: 'outer'});
+const criterios = tns({...sliderOptions, container: '#Criterios .slider', items: 5, nav: false, loop: false, gutter:30});
+const caballos = tns({...sliderOptions, container: '#Caballos .slider', items: 5, nav: false, loop: false, gutter:60});
+const fotos = tns({...sliderOptions, container: '#Imagenes.slider', items: 5, nav: false, gutter: 20, mouseDrag: false});
+const videos = tns({...sliderOptions, container: '#Videos.slider', items: 5, nav: false, gutter: 20, mouseDrag: false});
+
+
 function $(selector){
   return document.querySelector(selector);
 }
 
-function $$(selector){
-  return document.querySelectorAll(selector);
-}
+$('#Imagenes-ow').classList.add('active');;
 
-const toggleArrows = debounce((index,lastIndex,selector)=>{
-  if(index === lastIndex ){
-    $(selector+' .glide__arrow--right').classList.add('--hidden');
-    $(selector+' .glide__arrow--left').classList.remove('--hidden');
-  }
-  else if(index === 0){
-    $(selector+' .glide__arrow--left').classList.add('--hidden');
-    $(selector+' .glide__arrow--right').classList.remove('--hidden');
-  }
-  else {
-    $(selector+' .glide__arrow--right').classList.remove('--hidden');
-    $(selector+' .glide__arrow--left').classList.remove('--hidden');
-  }
-},50);
-
-var home = new Glide('#Home .glide',{type:'carousel'}).mount();
-
-var criterios = new Glide('#Criterios .glide',{perView: 5, bound: true, rewind: false, gap: 30}).mount();
-criterios.on('move', () => {
-  toggleArrows(criterios.index,2,"#Criterios")
-})
-
-var caballos = new Glide('#Caballos .glide',{perView: 5, bound: true, rewind: false, gap: 60}).mount();
-caballos.on('move', () => {
-  toggleArrows(caballos.index,4,"#Caballos")
-})
-
-var galeria;
 window.show = selector => {
   $('.active').classList.remove('active');
   $(selector).classList.add('active');
-  if(galeria) galeria.disable();
-  if(selector !== '#Testimonios') galeria = new Glide(selector,{type: 'carousel', perView: 3, focusAt: 'center', peek: 200, gap: 20}).mount();
 }
-show('#Imagenes');
 
 window.openImage = e => {
   const instance = basicLightbox.create(e.innerHTML);

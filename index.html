@@ -1,262 +1,269 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>El Morito</title>
-    <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1><img src="./img/logo.png" alt="El Morito"></h1>
-      <nav>
-        <a href="#Home">Home</a>
-        <a href="#Criterios">Criterios</a>
-        <a href="#Caballos">Caballos</a>
-        <a href="#Galeria">Galería</a>
-        <a href="#Creemos">Creemos</a>
-        <a href="#Contacto">Contacto</a>
-      </nav>
-    </header>
-    <!--
+
+<head>
+  <meta charset="utf-8">
+  <title>El Morito</title>
+  <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1><img src="./img/logo.png" alt="El Morito"></h1>
+    <nav>
+      <a href="#Home">Home</a>
+      <a href="#Criterios">Criterios</a>
+      <a href="#Caballos">Caballos</a>
+      <a href="#Galeria">Galería</a>
+      <a href="#Creemos">Creemos</a>
+      <a href="#Contacto">Contacto</a>
+    </nav>
+  </header>
+  <!--
     HOME
     -->
-    <section id="Home">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide ofrecemos">
-              <div class="ofrecemos__text">
-                <h3>Ofrecemos</h3>
-                <p>Caballos deportivos, salto,<br> adiestramiento, endurance.</p>
-                <a href="#Contacto" class="button">Consultar</a>
-              </div>
-            </li>
-            <li class="glide__slide crianza">
-              <div class="crianza__text">
-                <h3>Crianza a campo</h3>
-                <p>Con una buena cadena alimenticia <br>de pasturas consonciadas permiten <br>el desarrollo equilibrado del potrillo.</p>
-              </div>
-              <img src="./img/home2.png" alt="Crianza a campo">
-            </li>
-            <li class="glide__slide galeria">2</li>
-          </ul>
+  <section id="Home">
+    <ul class="slider">
+      <li class="ofrecemos">
+        <div class="ofrecemos__text">
+          <h3>Ofrecemos</h3>
+          <p>Caballos deportivos, salto,<br> adiestramiento, endurance.</p>
+          <a href="#Contacto" class="button">Consultar</a>
         </div>
-        <div class="glide__bullets" data-glide-el="controls[nav]">
-          <button class="glide__bullet" data-glide-dir="=0"></button>
-          <button class="glide__bullet" data-glide-dir="=1"></button>
-          <button class="glide__bullet" data-glide-dir="=2"></button>
+      </li>
+      <li class="crianza">
+        <div class="crianza__text">
+          <h3>Crianza a campo</h3>
+          <p>Con una buena cadena alimenticia <br>de pasturas consonciadas permiten <br>el desarrollo equilibrado del potrillo.</p>
         </div>
-      </div>
-      <hr class="gold-bar" data-emergence="hidden"/>
-    </section>
-    <!--
+        <img src="./img/home2.png" alt="Crianza a campo">
+      </li>
+      <li class="galeria">
+        <div class="sub-slider">
+          <div>
+            <a onclick="openVideo('EK4HdINaR_Q');return false" href="#">
+              <img src="https://img.youtube.com/vi/EK4HdINaR_Q/hqdefault.jpg" alt="Alisson">
+            </a>
+            <p>Caballos domados saltando en manga.</p>
+          </div>
+          <div>
+            <a onclick="openVideo('EK4HdINaR_Q');return false" href="#">
+              <img src="https://img.youtube.com/vi/EK4HdINaR_Q/hqdefault.jpg" alt="Alisson">
+            </a>
+            <p>Caballos domados saltando en manga.</p>
+          </div>
+          <div>
+            <a onclick="openVideo('EK4HdINaR_Q');return false" href="#">
+              <img src="https://img.youtube.com/vi/EK4HdINaR_Q/hqdefault.jpg" alt="Alisson">
+            </a>
+            <p>Caballos domados saltando en manga.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <hr class="gold-bar" data-emergence="hidden" />
+  </section>
+  <!--
     CRITERIOS
     -->
-    <section id="Criterios" data-emergence="hidden">
-      <h2 class="fade-in">Criterios de selección</h2>
-      <div class="glide fade-in delay-1">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <img src="./img/criterios/condicion.png" alt="Buena conformación física">
-              <p>Buena conformación física</p>
-            </li>
-            <li class="glide__slide">
-              <img src="./img/criterios/aplomos.png" alt="Aplomos Correctos">
-              <p>Aplomos Correctos</p>
-            </li>
-            <li class="glide__slide">
-              <img src="./img/criterios/costillas.png" alt="Arco de costillas amplio">
-              <p>Arco  de costillas amplio</p>
-            </li>
-            <li class="glide__slide">
-              <img src="./img/criterios/pecho.png" alt="Pecho y posterior fuertes">
-              <p>Pecho y posterior fuertes</p>
-            </li>
-            <li class="glide__slide">
-              <img src="./img/criterios/genetica.png" alt="Geneticas probadas">
-              <p>Geneticas probadas</p>
-            </li>
-            <li class="glide__slide">
-              <img src="./img/criterios/docilidad.png" alt="Docilidad">
-              <p>Docilidad</p>
-            </li>
-            <li class="glide__slide">
-              <img src="./img/criterios/belleza.png" alt="Belleza">
-              <p>Belleza</p>
-            </li>
-          </ul>
-        </div>
-        <div class="glide__arrows" data-glide-el="controls">
-         <button class="glide__arrow glide__arrow--left sans --hidden" data-glide-dir="<">❮</button>
-         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
-        </div>
-      </div>
-    </section>
-    <!--
+  <section id="Criterios" data-emergence="hidden">
+    <h2 class="fade-in">Criterios de selección</h2>
+    <div class="fade-in delay-1">      
+      <ul class="slider">
+        <li>
+          <img src="./img/criterios/condicion.png" alt="Buena conformación física">
+          <p>Buena conformación física</p>
+        </li>
+        <li>
+          <img src="./img/criterios/aplomos.png" alt="Aplomos Correctos">
+          <p>Aplomos Correctos</p>
+        </li>
+        <li>
+          <img src="./img/criterios/costillas.png" alt="Arco de costillas amplio">
+          <p>Arco de costillas amplio</p>
+        </li>
+        <li>
+          <img src="./img/criterios/pecho.png" alt="Pecho y posterior fuertes">
+          <p>Pecho y posterior fuertes</p>
+        </li>
+        <li>
+          <img src="./img/criterios/genetica.png" alt="Geneticas probadas">
+          <p>Geneticas probadas</p>
+        </li>
+        <li>
+          <img src="./img/criterios/docilidad.png" alt="Docilidad">
+          <p>Docilidad</p>
+        </li>
+        <li>
+          <img src="./img/criterios/belleza.png" alt="Belleza">
+          <p>Belleza</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--
     CABALLOS
     -->
-    <section id="Caballos" data-emergence="hidden">
-      <h2 class="fade-in">Caballos en Competencia</h2>
-      <div class="glide fade-in delay-1">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides caballos">
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/1-Curtis-Blue.svg" alt="E.M. Curtís Blue" style="bottom: 95%">
-              <img class="caballos__photo" src="./img/caballos/curtis.png" alt="foto de E.M. Curtís Blue">
-              <p class="sans">Nombre: E.M. Curtís Blue <br>
-                Edad: 9 años <br>
-                Sexo: Macho <br>
-                Altura: 1.73 de Alzada <br>
-                Tordillo Negro <br>
-                Actualmente: Compite en <br>
-                Salto 1.10m en Hunters / <br>
-                N. Jersey, U.S.A.</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/2-Rey-Momo.svg" alt="E.M. Rey Momolt=">
-              <img class="caballos__photo" src="./img/caballos/momo.png" alt="foto de E.M. Rey Momo" style="transform: translate(-11%,-10%)">
-              <p class="sans">Nombre: E.M. Rey Momo <br>
-                Edad: 10 años <br>
-                Sexo: Macho <br>
-                Altura: 1.70 de Alzada <br>
-                Tordillo <br>
-                Actualmente: Compite en <br>
-                Salto 1.20m / New Jersey, <br>
-                U.S.A.</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/3-Blue-Sea.svg" alt="E.M. Blue Sea">
-              <img class="caballos__photo" src="./img/caballos/bluesea.png" alt="foto de E.M. Blue Sea" style="transform: translate(0,-7%)">
-              <p class="sans">Nombre: E.M. Blue Sea <br>
-                Edad: 10 años <br>
-                Sexo: Macho <br>
-                Altura: 1.70 de Alzada <br>
-                Tordillo <br>
-                Actualmente: Compite <br>
-                en Salto 1.20m / U.S.A. <br>
-                Padre Remonta Teorema.</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/4-Dulcinea.svg" alt="E.M. Dulcinea">
-              <img class="caballos__photo" src="./img/caballos/dulcinea.png" alt="foto de E.M. Dulcinea" style="transform: translate(0,-7%)">
-              <p class="sans">Nombre: E.M. Dulcinea <br>
-                Edad: 9 años <br>
-                Sexo: Hembra <br>
-                Altura: 1.67 de Alzada <br>
-                Propietario: Isidro Lamarca <br>
-                Actualmente: Compite en <br>
-                Salto 1.10m / Mar del Plata, <br>
-                Argentina.</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/5-Valentina.svg" alt="E.M. Valentina">
-              <img class="caballos__photo" src="./img/caballos/valentina.png" alt="foto de E.M. Valentina" style="transform: translate(-23%,3%)">
-              <p class="sans">Nombre: E.M. Valentina <br>
-                Edad: ? <br>
-                Sexo: Hembra <br>
-                Altura: ? <br>
-                Actualmente: ?	</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/6-Reina-do-carnaval.svg" alt="E.M. R. Do Carnaval">
-              <img class="caballos__photo" src="./img/caballos/reina.png" alt="foto de E.M. R. Do Carnaval" style="transform: translate(0,-7%)">
-              <p class="sans">Nombre: E.M. R. Do Carnaval <br>
-                Edad: 9 Años <br>
-                Sexo: Hembra <br>
-                Altura: 1.64 de AlzadaTordilla <br>
-                Actualmente: Compite <br>
-                en Salto 1.30 m. <br>
-                New Jersey U.S.A</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/7-Alisson.svg" alt="E.M. Alisson">
-              <img class="caballos__photo" src="./img/caballos/alisson.png" alt="foto de E.M. Alisson" style="transform: translate(-10%,-7%);">
-              <p class="sans">Nombre: E.M. Alisson <br>
-                Edad: 10 Años <br>
-                Sexo: Hembra Alazán <br>
-                Altura: 1.65 de Alzada <br>
-                Actualmente: Compite <br>
-                en salto 1.20 / U.SA. <br>
-                Padre: Remonta Teorema</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/8-LanzaPerfume.svg" alt="E.M. Lanza Perfume">
-              <img class="caballos__photo" src="./img/caballos/lanzaperfume.png" alt="foto de E.M. Lanza Perfume" style="transform: translate(0,9%)">
-              <p class="sans">Nombre: E.M. Lanza Perfume <br>
-                Edad: 5 Años <br>
-                Sexo: Hembra <br>
-                Altura: 1.72 de Alzada <br>
-                Tordilla Negra en formación. <br>
-                Padre: Carnaval du Ruet</p>
-            </li>
-            <li class="glide__slide">
-              <img class="caballos__name" src="./img/caballos/9-Mamura.svg" alt="E.M. Mamurá">
-              <img class="caballos__photo" src="./img/caballos/mamura.png" alt="foto de E.M. Mamurá" style="transform: translate(0,-4%)">
-              <p class="sans">Nombre: E.M. Mamurá <br>
-                Edad: ? <br>
-                Sexo: ? <br>
-                Altura: ? <br>
-                Raza: ? <br>
-                Actualmente: ?</p>
-            </li>
-          </ul>
-        </div>
-        <div class="glide__arrows" data-glide-el="controls">
-         <button class="glide__arrow glide__arrow--left sans --hidden" data-glide-dir="<">❮</button>
-         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
-        </div>
-      </div>
-    </section>
-    <!--
+  <section id="Caballos" data-emergence="hidden">
+    <h2 class="fade-in">Caballos en Competencia</h2>
+    <div class="fade-in delay-1">
+      <ul class="slider">
+        <li>
+          <img class="name" src="./img/caballos/1-Curtis-Blue.svg" alt="E.M. Curtís Blue" style="bottom: 95%">
+          <img class="photo" src="./img/caballos/curtis.png" alt="foto de E.M. Curtís Blue">
+          <p class="sans">Nombre: E.M. Curtís Blue <br>
+            Edad: 9 años <br>
+            Sexo: Macho <br>
+            Altura: 1.73 de Alzada <br>
+            Tordillo Negro <br>
+            Actualmente: Compite en <br>
+            Salto 1.10m en Hunters / <br>
+            N. Jersey, U.S.A.</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/2-Rey-Momo.svg" alt="E.M. Rey Momolt=">
+          <img class="photo" src="./img/caballos/momo.png" alt="foto de E.M. Rey Momo" style="transform: translate(-11%,-10%)">
+          <p class="sans">Nombre: E.M. Rey Momo <br>
+            Edad: 10 años <br>
+            Sexo: Macho <br>
+            Altura: 1.70 de Alzada <br>
+            Tordillo <br>
+            Actualmente: Compite en <br>
+            Salto 1.20m / New Jersey, <br>
+            U.S.A.</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/3-Blue-Sea.svg" alt="E.M. Blue Sea">
+          <img class="photo" src="./img/caballos/bluesea.png" alt="foto de E.M. Blue Sea" style="transform: translate(0,-7%)">
+          <p class="sans">Nombre: E.M. Blue Sea <br>
+            Edad: 10 años <br>
+            Sexo: Macho <br>
+            Altura: 1.70 de Alzada <br>
+            Tordillo <br>
+            Actualmente: Compite <br>
+            en Salto 1.20m / U.S.A. <br>
+            Padre Remonta Teorema.</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/4-Dulcinea.svg" alt="E.M. Dulcinea">
+          <img class="photo" src="./img/caballos/dulcinea.png" alt="foto de E.M. Dulcinea" style="transform: translate(0,-7%)">
+          <p class="sans">Nombre: E.M. Dulcinea <br>
+            Edad: 9 años <br>
+            Sexo: Hembra <br>
+            Altura: 1.67 de Alzada <br>
+            Propietario: Isidro Lamarca <br>
+            Actualmente: Compite en <br>
+            Salto 1.10m / Mar del Plata, <br>
+            Argentina.</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/5-Valentina.svg" alt="E.M. Valentina">
+          <img class="photo" src="./img/caballos/valentina.png" alt="foto de E.M. Valentina" style="transform: translate(-23%,3%)">
+          <p class="sans">Nombre: E.M. Valentina <br>
+            Edad: ? <br>
+            Sexo: Hembra <br>
+            Altura: ? <br>
+            Actualmente: ? </p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/6-Reina-do-carnaval.svg" alt="E.M. R. Do Carnaval">
+          <img class="photo" src="./img/caballos/reina.png" alt="foto de E.M. R. Do Carnaval" style="transform: translate(0,-7%)">
+          <p class="sans">Nombre: E.M. R. Do Carnaval <br>
+            Edad: 9 Años <br>
+            Sexo: Hembra <br>
+            Altura: 1.64 de AlzadaTordilla <br>
+            Actualmente: Compite <br>
+            en Salto 1.30 m. <br>
+            New Jersey U.S.A</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/7-Alisson.svg" alt="E.M. Alisson">
+          <img class="photo" src="./img/caballos/alisson.png" alt="foto de E.M. Alisson" style="transform: translate(-10%,-7%);">
+          <p class="sans">Nombre: E.M. Alisson <br>
+            Edad: 10 Años <br>
+            Sexo: Hembra Alazán <br>
+            Altura: 1.65 de Alzada <br>
+            Actualmente: Compite <br>
+            en salto 1.20 / U.SA. <br>
+            Padre: Remonta Teorema</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/8-LanzaPerfume.svg" alt="E.M. Lanza Perfume">
+          <img class="photo" src="./img/caballos/lanzaperfume.png" alt="foto de E.M. Lanza Perfume" style="transform: translate(0,9%)">
+          <p class="sans">Nombre: E.M. Lanza Perfume <br>
+            Edad: 5 Años <br>
+            Sexo: Hembra <br>
+            Altura: 1.72 de Alzada <br>
+            Tordilla Negra en formación. <br>
+            Padre: Carnaval du Ruet</p>
+        </li>
+        <li>
+          <img class="name" src="./img/caballos/9-Mamura.svg" alt="E.M. Mamurá">
+          <img class="photo" src="./img/caballos/mamura.png" alt="foto de E.M. Mamurá" style="transform: translate(0,-4%)">
+          <p class="sans">Nombre: E.M. Mamurá <br>
+            Edad: ? <br>
+            Sexo: ? <br>
+            Altura: ? <br>
+            Raza: ? <br>
+            Actualmente: ?</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--
     GALERIA
     -->
-    <section id="Galeria" data-emergence="hidden">
-      <h2 class="fade-in">Galería</h2>
-      <div class="buttons fade-in delay-1">
-        <a href="#Imagenes" class="button" onclick="show('#Imagenes');return false;">Imagenes</a>
-        <a href="#Testimonios" class="button" onclick="show('#Testimonios');return false;">Testimonios</a>
-        <a href="#Videos" class="button" onclick="show('#Videos');return false;">Videos</a>
-      </div>
-      <div class="glide active fade-in delay-2" id="Imagenes">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides fotos">
-            <li class="glide__slide">
-              <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/6b5c9185-976b-41ce-8703-98a53a6aaa4e.jpg" alt="Caballo Saltando"></a>
-            </li>
-            <li class="glide__slide">
-              <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/9c266576-e6d3-433e-a6f6-84120c51e56b.jpg" alt="Caballo saltando"></a>
-            </li>
-            <li class="glide__slide">
-              <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/20b26ed2-98df-496e-813f-46b14d6cf019.jpg" alt="Caballo Saltando"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="glide__arrows" data-glide-el="controls">
-         <button class="glide__arrow glide__arrow--left sans" data-glide-dir="<">❮</button>
-         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
-        </div>
-      </div>
-      <div class="glide" id="Videos">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides videos">
-            <li class="glide__slide">
-              <a onclick="openVideo('Cjzb6VKYHi8');return false" href="#"><img src="https://img.youtube.com/vi/Cjzb6VKYHi8/mqdefault.jpg" alt="Curtis Blue"></a>
-            </li>
-            <li class="glide__slide">
-              <a onclick="openVideo('OCicHf_7cDg');return false" href="#"><img src="https://img.youtube.com/vi/OCicHf_7cDg/mqdefault.jpg" alt="Rey Momo"></a>
-            </li>
-            <li class="glide__slide">
-              <a onclick="openVideo('O0CR7LMs0z8');return false" href="#"><img src="https://img.youtube.com/vi/O0CR7LMs0z8/mqdefault.jpg" alt="BlueSea"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="glide__arrows" data-glide-el="controls">
-         <button class="glide__arrow glide__arrow--left sans" data-glide-dir="<">❮</button>
-         <button class="glide__arrow glide__arrow--right sans" data-glide-dir=">">❯</button>
-        </div>
-      </div>
-      <div class="" id="Testimonios">
+  <section id="Galeria" data-emergence="hidden">
+    <h2 class="fade-in">Galería</h2>
+    <div class="buttons fade-in delay-1">
+      <button class="button" onclick="show('#Imagenes-ow')">Imagenes</a>
+        <button class="button" onclick="show('#Testimonios')">Testimonios</a>
+          <button class="button" onclick="show('#Videos-ow')">Videos</a>
+    </div>
+    <div class="fade-in delay-2">
+      <ul id="Imagenes" class="slider">
+        
+        <li>
+          <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/6b5c9185-976b-41ce-8703-98a53a6aaa4e.jpg" alt="Caballo Saltando"></a>
+        </li>
+        <li>
+          <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/9c266576-e6d3-433e-a6f6-84120c51e56b.jpg" alt="Caballo saltando"></a>
+        </li>
+        <li>
+          <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/20b26ed2-98df-496e-813f-46b14d6cf019.jpg" alt="Caballo Saltando"></a>
+        </li>
+        <li>
+          <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/38d385a3-7d3f-4bf1-abde-ece3a17f8ba9.jpg" alt="Caballos Pastando"></a>
+        </li>
+        <li>
+          <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/731d177b-47b8-48bf-9fb9-fecb4088a7c2.jpg" alt="Caballo Saltando"></a>
+        </li>
+        <li>
+          <a onclick="openImage(this);return false" href="#"><img src="./img/uploads/177780f1-5435-45dc-8078-829b79b4753a.jpg" alt="Caballos en caballeriza"></a>
+        </li>
+      </ul>
+      <ul id="Videos" class="slider">
+        
+        <li>
+          <a onclick="openVideo('Cjzb6VKYHi8');return false" href="#"><img src="https://img.youtube.com/vi/Cjzb6VKYHi8/mqdefault.jpg" alt="Curtis Blue"></a>
+        </li>
+        <li>
+          <a onclick="openVideo('OCicHf_7cDg');return false" href="#"><img src="https://img.youtube.com/vi/OCicHf_7cDg/mqdefault.jpg" alt="Rey Momo"></a>
+        </li>
+        <li>
+          <a onclick="openVideo('O0CR7LMs0z8');return false" href="#"><img src="https://img.youtube.com/vi/O0CR7LMs0z8/mqdefault.jpg" alt="BlueSea"></a>
+        </li>
+        <li>
+          <a onclick="openVideo('azqxt16khgU');return false" href="#"><img src="https://img.youtube.com/vi/azqxt16khgU/mqdefault.jpg" alt="Dulcinea"></a>
+        </li>
+        <li>
+          <a onclick="openVideo('EK4HdINaR_Q');return false" href="#"><img src="https://img.youtube.com/vi/EK4HdINaR_Q/mqdefault.jpg" alt="Alisson"></a>
+        </li>
+        <li>
+          <a onclick="openVideo('OlKxs9sN418');return false" href="#"><img src="https://img.youtube.com/vi/OlKxs9sN418/mqdefault.jpg" alt="Reina del Carnaval"></a>
+        </li>
+      </ul>
+      <div id="Testimonios">
         <div class="testimonio">
           <img src="/img/maria.png" alt="foto de María Jesus Montone">
           <h4>María Jesus Montone</h4>
@@ -274,60 +281,62 @@
           </audio>
         </div>
       </div>
-    </section>
-    <!--
+    </div>
+  </section>
+  <!--
     CREEMOS
     -->
-    <section id="Creemos" data-emergence="hidden">
-      <h2 class="fade-in">Creemos</h2>
-      <div class="fade-in delay-1">
-        <p>En un caballo confiable. Ideal para el jinete amateur que formará un binomio con su caballo, aclanzando juntos los resultados buscados.</p>
-        <img src="./img/para-esto.png" alt="Para Esto...">
-      </div>
-      <div class="fade-in delay-2">
-        <p>Una doma racional y sin violencia.</p>
-        <p>Tener una confianza mútua da excelentes resultados.</p>
-        <p>La enseñanza por entendimiento y convicción da resultados duraderos.</p>
-        <br>
-        <p>La presión contínua desanima y flagela. </p>
-        <p>Continuidad en la enseñanza ligando la doma con el posterior entrenamiento.</p>
-        <br>
-        <p>Creemos en un “Caballo Amigo”.</p>
-      </div>
-    </section>
-    <!--
+  <section id="Creemos" data-emergence="hidden">
+    <h2 class="fade-in">Creemos</h2>
+    <div class="fade-in delay-1">
+      <p>En un caballo confiable. Ideal para el jinete amateur que formará un binomio con su caballo, aclanzando juntos los resultados buscados.</p>
+      <img src="./img/para-esto.png" alt="Para Esto...">
+    </div>
+    <div class="fade-in delay-2">
+      <p>Una doma racional y sin violencia.</p>
+      <p>Tener una confianza mútua da excelentes resultados.</p>
+      <p>La enseñanza por entendimiento y convicción da resultados duraderos.</p>
+      <br>
+      <p>La presión contínua desanima y flagela. </p>
+      <p>Continuidad en la enseñanza ligando la doma con el posterior entrenamiento.</p>
+      <br>
+      <p>Creemos en un “Caballo Amigo”.</p>
+    </div>
+  </section>
+  <!--
     CONTACTO
     -->
-    <section id="Contacto" data-emergence="hidden">
-      <h2 class="fade-in">Contacto</h2>
-      <form name="contact" method="POST" netlify>
-        <fieldset>
-          <input type="text" name="nombre" placeholder="Nombre y Apellido">
-          <input type="tel" name="telefono" placeholder="Teléfono">
-          <input type="email" name="email" placeholder="E-mail">
-        </fieldset>
-        <fieldset>
-          <input type="text" name="motivo" placeholder="Motivo de consulta">
-          <textarea name="mensaje" rows="4" placeholder="Deja tu mensaje..."></textarea>
-        </fieldset>
-        <input type="submit" value="Enviar">
-      </form>
-      <img src="./img/contacto.png" alt="Contacto">
-      <hr class="gold-bar" data-emergence="hidden"/>
-    </section>
-    <!--
+  <section id="Contacto" data-emergence="hidden">
+    <h2 class="fade-in">Contacto</h2>
+    <form name="contact" method="POST" netlify>
+      <fieldset>
+        <input type="text" name="nombre" placeholder="Nombre y Apellido">
+        <input type="tel" name="telefono" placeholder="Teléfono">
+        <input type="email" name="email" placeholder="E-mail">
+      </fieldset>
+      <fieldset>
+        <input type="text" name="motivo" placeholder="Motivo de consulta">
+        <textarea name="mensaje" rows="4" placeholder="Deja tu mensaje..."></textarea>
+      </fieldset>
+      <input type="submit" value="Enviar">
+    </form>
+    <img src="./img/contacto.png" alt="Contacto">
+    <hr class="gold-bar" data-emergence="hidden" />
+  </section>
+  <!--
     FOOTER
     -->
-    <footer>
-      <div>
-        <img src="./img/logo.png" alt="El Morito">
-      </div>
-      <div>
-        <p>Dirección 1528 - Necochea, Bs. As, Argentina.</p>
-        <p>+54 2262 49 0317 // +54 2262 35 5118</p>
-        <p>info@haraselmorito.com</p>
-      </div>
-    </footer>
-    <script src="./js/index.js"></script>
-  </body>
+  <footer>
+    <div>
+      <img src="./img/logo.png" alt="El Morito">
+    </div>
+    <div>
+      <p>Dirección 1528 - Necochea, Bs. As, Argentina.</p>
+      <p>+54 2262 49 0317 // +54 2262 35 5118</p>
+      <p>info@haraselmorito.com</p>
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
+</body>
+
 </html>
