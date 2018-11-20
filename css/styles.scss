@@ -335,13 +335,14 @@ header{
       }
     }
   }
+  .tns-controls{
+    top: 40px;
+    width: 0;
+    left: 50%;
+
+  }
   .slider{
-    margin-top: 60px;
-    .tns-controls{
-      top: -35px;
-      right: 20px;
-      width: 100px
-    }
+    margin-top: 80px;
   }
   .slider li > a{
     display: inline-block;
@@ -560,7 +561,20 @@ footer{
     float: right;
   }
   p{
-    margin: 1em 0;
+    margin: 0;
+    padding: 1em 0;
     font-size: .6rem;
+    padding-left: 30px;
+    line-height: 16px;
+    background-size: 16px 16px !important;
+  }
+  .tel{
+    background: url('../img/tel.png') no-repeat left;
+  }
+  .dir{
+    background: url('../img/dir.png') no-repeat left;
+  }
+  .mail{
+    background: url('../img/mail.png') no-repeat left;
   }
 }
