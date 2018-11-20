@@ -264,22 +264,22 @@ header{
     li{
       position: relative;
       margin-top: 100px;
-      padding-top: 12vw;
     }
     .name{
       position: absolute;
-      z-index: 1;
-      bottom: 100%;
+      z-index: -1;
+      bottom: 95%;
+      width: 80%;
+      left: 15%;
     }
     .photo{
       z-index: 2;
-      position: absolute;
       max-width: 100%;
       height: auto;
-      top: 0;
     }
     .sans{
       font-size: 0.8rem;
+      padding-left: 20%;
     }
   }
 }

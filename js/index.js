@@ -20,7 +20,7 @@ emergence.init();
 const subHome = tns({...sliderOptions, container: '#Home .sub-slider', items: 1, nav: false, mouseDrag: false, nested: 'inner'});
 const home = tns({...sliderOptions, container: '#Home .slider', items: 1, controls: false, mouseDrag: false, autoplay: true, autoplayButtonOutput: false, nested: 'outer'});
 const criterios = tns({...sliderOptions, container: '#Criterios .slider', items: 5, nav: false, loop: false, gutter:30});
-const caballos = tns({...sliderOptions, container: '#Caballos .slider', items: 5, nav: false, loop: false, gutter:60});
+const caballos = tns({...sliderOptions, container: '#Caballos .slider', items: 5, nav: false, loop: false, gutter:0});
 const fotos = tns({...sliderOptions, container: '#Imagenes.slider', items: 5, nav: false, gutter: 20, mouseDrag: false});
 const videos = tns({...sliderOptions, container: '#Videos.slider', items: 5, nav: false, gutter: 20, mouseDrag: false});
 
