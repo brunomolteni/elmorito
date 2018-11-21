@@ -434,6 +434,30 @@ header{
         bottom: 20px;
       }
     }
+    @media screen and (max-width: 1000px) {
+      padding: 120px 40px 0;
+      .testimonio {
+        padding-left: 140px;
+        img{
+          width: 140px;
+        }
+      }
+    }
+    @media screen and (max-width: 800px) {
+      padding: 120px 0 0;
+      flex-direction: column;
+      .testimonio {
+        margin-bottom: 20px;
+        padding-left: 160px;
+        &:last-child{
+          margin: 0;
+        }
+        img{
+          left: 10px;
+          bottom: 40px;
+        }
+      }
+    }
   }
   .tns-controls{
     top: 40px;
@@ -480,7 +504,6 @@ header{
       z-index: 1;
       width: 100%;
     }
-
     &:hover{
       color: white;
       &:after, &:before{
@@ -491,13 +514,24 @@ header{
         transform: scale(1.3);
       }
     }
-
     img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition-duration: .3s;
       will-change: filter, transform;
+    }
+  }
+  @media screen and (max-width: 700px){
+    li.tns-slide-active{
+      a:after, a:before{
+        opacity: 1;
+      }
+
+      img{
+        filter: grayscale(40%) contrast(200%) brightness(0.3);
+        transform: scale(1.3);
+      }
     }
   }
   #Imagenes{
