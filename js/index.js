@@ -8,14 +8,17 @@ import initEmergence from 'emergence.js'; // https://github.com/xtianmiller/emer
 import * as basicLightbox from 'basiclightbox' // https://basiclightbox.electerious.com/
 import Plyr from 'plyr';
 import { tns } from 'tiny-slider';
+import smoothscroll from 'smoothscroll-polyfill';
 
+
+// SETUP
+smoothscroll.polyfill();
+initEmergence(this).init();
+Plyr.setup('.plyr',{controls: ['play', 'progress']});
+
+
+// SLIDERS
 const sliderOptions = {controlsText: ['❮','❯'],"mouseDrag": true,"swipeAngle": false, controlsPosition: "bottom"};
-
-const players = Plyr.setup('.plyr',{controls: ['play', 'progress']});
-
-const emergence = initEmergence(this);
-
-emergence.init();
 
 const subHome = tns({...sliderOptions, container: '#Home .sub-slider', items: 1, nav: false, mouseDrag: false, nested: 'inner'});
 const home = tns({...sliderOptions, container: '#Home .slider', items: 1, controls: false, mouseDrag: false, autoplay: true, autoplayButtonOutput: false, nested: 'outer'});
@@ -104,6 +107,7 @@ const videos = tns({...sliderOptions,
   },
 });
 
+// HANDLERS
 
 function $(selector){
   return document.querySelector(selector);

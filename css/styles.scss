@@ -1,12 +1,15 @@
 *{
   box-sizing: border-box;
 }
+html, body{
+  scroll-behavior: smooth;
+  overflow: hidden;
+  overflow-y: auto;
+}
 body, input, textarea, button{
   font-family: 'Arbutus Slab', serif;
   color: #1b1b1b;
   margin: 0;
-  overflow: hidden;
-  overflow-y: auto;
 }
 h1,h2,h3{
   text-transform: uppercase;
@@ -46,7 +49,6 @@ a{
   }
 }
 section{
-  min-height: 100vh;
   padding: 80px 10vw;
 }
 // ---------------------
@@ -71,7 +73,7 @@ header{
   h1{
     margin: 0;
     height: 60px;
-    margin-right: 20px;
+    margin-right: 80px;
   }
 
   img{
@@ -82,6 +84,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 50vw;
   }
   a{
     padding: 5px;
@@ -139,7 +142,6 @@ header{
   padding: 0;
   background-color: black;
   color: white;
-  min-height: 0;
   position: relative;
 
   h3{
@@ -200,22 +202,29 @@ header{
   }
 
   .crianza{
-    padding: 80px 10vw;
+    padding: 80px 0;
     background-image: url('../img/home2-bg.jpg');
     position: relative;
 
     &__text{
-      transition: transform .6s ease-out,opacity .6s ease-out;
-      transition-delay: .3s;
+      position: absolute;
+      left: 0;
+      top: 140px;
+      width: 100vw;
+      padding-right: 60vw;
+      padding-left: 10vw;
+      height: 80%;
+      height: calc(100% - 220px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       background-color: rgba(241, 217, 189,0.8);
-      transform: translateX(100vw);
-      opacity: 0;
-      height: 110%;
-      display: inline-block;
-      padding: 20vh 50vw;
-      width: 200vw;
       color: black;
       user-select: none;
+      transition: transform .6s ease-out,opacity .6s ease-out;
+      transition-delay: .3s;
+      transform: translateX(100vw);
+      opacity: 0;
 
       h3{
         color: #9d562f;
@@ -224,22 +233,42 @@ header{
 
     img{
       position: absolute;
-      left: 50vw;
-      bottom: 20px;
-      height: 90%;
-      height: calc(100% - 80px);
-      transform: translateX(100vw);
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      max-height: 90%;
+      object-fit: contain;
+      object-position: 100% 0%;
       transition: transform .6s ease-out;
     }
 
     &.tns-slide-active{
       .crianza__text{
-        transform: translateX(-120vw);
-        opacity: 1;
-      }
-      img{
         transform: translateX(0);
         opacity: 1;
+        @media screen and (max-width: 1200px){
+          padding-right: 50vw;
+        }
+        @media screen and (max-width: 900px){
+          padding: 40px 0 45vh;
+          top: 80px;
+          width: auto;
+          left: 20px;
+          right: 20px;
+          height: calc(100% - 100px);
+          text-align: center;
+        }
+      }
+      img{
+        transform: translateX(0%);
+        opacity: 1;
+        @media screen and (max-width: 1200px){
+          width: 50vw;
+        }
+        @media screen and (max-width: 900px){
+          height: 45%;
+          width: auto;
+        }
       }
     }
   }
@@ -307,6 +336,7 @@ header{
 #Criterios{
   .slider{
     padding-bottom: 20px;
+    margin: 80px 0 ;
   }
   li{
     text-align: center;
@@ -333,18 +363,18 @@ header{
     padding-bottom: 20px;
     li{
       position: relative;
-      margin-top: 100px;
+      margin-top: 150px;
     }
     .name{
       position: absolute;
       z-index: -1;
       bottom: 95%;
-      width: 80%;
       left: 15%;
+      width: 80%;
     }
     .photo{
       z-index: 2;
-      max-width: 100%;
+      width: 100%;
       height: auto;
     }
     .sans{
