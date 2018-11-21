@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>El Morito</title>
   <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -17,26 +18,29 @@
       <a href="#Galeria">Galería</a>
       <a href="#Creemos">Creemos</a>
       <a href="#Contacto">Contacto</a>
+      <button class="close">✕</button>
     </nav>
+    <button class="menu">☰</button>
   </header>
   <!--
     HOME
     -->
   <section id="Home">
     <ul class="slider">
-      <li class="ofrecemos">
-        <div class="ofrecemos__text">
+      <li class="ofrecemos" >
+        <div class="ofrecemos__text" data-emergence="hidden">
           <h3>Ofrecemos</h3>
           <p>Caballos deportivos, salto,<br> adiestramiento, endurance.</p>
           <a href="#Contacto" class="button">Consultar</a>
         </div>
+        <hr class="gold-bar" data-emergence="hidden" />
       </li>
       <li class="crianza">
-        <div class="crianza__text">
+        <div class="crianza__text"  data-emergence="hidden">
           <h3>Crianza a campo</h3>
           <p>Con una buena cadena alimenticia <br>de pasturas consonciadas permiten <br>el desarrollo equilibrado del potrillo.</p>
         </div>
-        <img src="./img/home2.png" alt="Crianza a campo">
+        <img src="./img/home2.png" alt="Crianza a campo"  data-emergence="hidden">
       </li>
       <li class="galeria">
         <div class="sub-slider">
@@ -61,7 +65,6 @@
         </div>
       </li>
     </ul>
-    <hr class="gold-bar" data-emergence="hidden" />
   </section>
   <!--
     CRITERIOS

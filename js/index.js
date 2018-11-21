@@ -109,6 +109,10 @@ function $(selector){
   return document.querySelector(selector);
 }
 
+function $$(selector){
+  return document.querySelectorAll(selector);
+}
+
 $('#Imagenes-ow').classList.add('active');;
 
 window.show = selector => {
@@ -126,3 +130,13 @@ window.openVideo = id => {
   const instance = basicLightbox.create(frame);
   instance.show();
 }
+
+const openMenu = () => {
+  $('header').classList.add('open');
+}
+const closeMenu = () => {
+  $('header').classList.remove('open');
+}
+
+$$('header nav a, header .close').forEach( el=> el.addEventListener('click',closeMenu));
+$('header .menu').addEventListener('click',openMenu);

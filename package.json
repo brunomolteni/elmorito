@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "git pull && node render && parcel index.html --open",
-    "build": "node render && parcel build index.html --experimental-scope-hoisting && cpy admin/* dist/admin"
+    "build": "node render && parcel build index.html --experimental-scope-hoisting && cpy admin/* dist/admin",
+    "parcel": "parcel index.html --open"
   },
   "author": "",
   "license": "ISC",

@@ -66,20 +66,70 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 20;
 
   h1{
     margin: 0;
     height: 60px;
+    margin-right: 20px;
   }
 
   img{
     max-height: 60px;
   }
-
+  nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   a{
-    margin-left: 40px;
     padding: 5px;
+  }
+  button{
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    &:focus{
+      color: rgba(206,149,92,.4);
+    }
+  }
+
+  @media screen and (max-width: 900px){
+    nav{
+      background-color: black;
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 20px;
+      width: 60vw;
+      transform: translateX(50vw);
+      opacity: 0;
+      transition-duration: .6s;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &.open nav{
+      transform: translateX(0);
+      opacity: 1;
+    }
+    a{
+      margin: 20px;
+      font-size: 1.2rem;
+    }
+    .menu{
+      display: block;
+    }
+    .close{
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
   }
 }
 // ---------------------
@@ -103,8 +153,8 @@ header{
 
   .slider{
     li{
-      height: 90vh;
-      height: calc(100vh - 80px);
+      height: 95vh;
+      height: calc(100vh - 60px);
       background-position: center;
       background-size: cover;
       text-align: right;
@@ -116,6 +166,7 @@ header{
   .ofrecemos{
     padding: 30vh 10vw 0;
     background-image: url('../img/home1-bg.jpg');
+    position: relative;
 
     &__text{
       margin-right: 65%;
@@ -134,6 +185,18 @@ header{
       transform: translateX(0);
       opacity: 1;
     }
+    @media screen and (max-width: 800px){
+      &__text{
+        margin-right: 0;
+        background-color: rgba(0,0,0,0.8);
+        width: 100vw;
+        text-align: center;
+        padding: 20px 0;
+      }
+      &.tns-slide-active .ofrecemos__text{
+        transform: translateX(-10vw);
+      }
+    }
   }
 
   .crianza{
@@ -149,15 +212,19 @@ header{
       opacity: 0;
       height: 110%;
       display: inline-block;
-      padding: 20vh 30vw;
-      width: 100vw;
+      padding: 20vh 50vw;
+      width: 200vw;
       color: black;
       user-select: none;
+
+      h3{
+        color: #9d562f;
+      }
     }
 
     img{
       position: absolute;
-      right: 0;
+      left: 50vw;
       bottom: 20px;
       height: 90%;
       height: calc(100% - 80px);
@@ -167,7 +234,7 @@ header{
 
     &.tns-slide-active{
       .crianza__text{
-        transform: translateX(-40vw);
+        transform: translateX(-120vw);
         opacity: 1;
       }
       img{
@@ -551,6 +618,30 @@ header{
       transform: translateX(120%);
     }
   }
+  @media screen and (max-width: 700px){
+    form, fieldset{
+      flex-direction: column;
+    }
+    fieldset{
+      display: flex;
+      &:first-of-type{
+        padding: 0;
+      }
+    }
+    input[type=submit] {
+      position: static;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 500px){
+    form{
+      padding: 0;
+    }
+    .gold-bar, img{
+      display: none;
+    }
+  }
+
 }
 // ---------------------
 // FOOTER
@@ -591,5 +682,12 @@ footer{
   }
   .mail{
     background: url('../img/mail.png') no-repeat left;
+  }
+  @media screen and (max-width: 700px){
+    flex-direction: column;
+
+    div:last-child{
+      border: none;
+    }
   }
 }
