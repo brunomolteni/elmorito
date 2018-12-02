@@ -293,15 +293,16 @@ header{
     }
     a{
       position: relative;
+      display: block;
       &:focus{
         background: transparent;
       }
       &:after{
         content: '▶';
         position: absolute;
-        bottom: 160px;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         line-height: 0;
         font-size: 3rem;
         text-align: center;
