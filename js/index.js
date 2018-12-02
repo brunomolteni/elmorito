@@ -151,12 +151,11 @@ const form = $('form');
 const formSubmit = e => {
   form.classList.add('loading');
   e.preventDefault();
-  fetch(form.action, {
+  fetch('/', {
     method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: serialize(form)
-  }).then( r => {
-    form.classList.remove('loading')
-    return r.json();
-  }).then( console.log );
+  }).then(() => alert("Success!"))
+    .catch(error => alert(error));
 }
 form.addEventListener('submit',formSubmit)
