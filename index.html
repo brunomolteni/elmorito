@@ -322,7 +322,7 @@
     -->
   <section id="Contacto" data-emergence="hidden">
     <h2 class="fade-in">Contacto</h2>
-    <form name="contact" method="POST" netlify="true">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <fieldset>
         <input type="text" name="nombre" placeholder="Nombre y Apellido">
         <input type="tel" name="telefono" placeholder="Teléfono">
@@ -332,6 +332,7 @@
         <input type="text" name="motivo" placeholder="Motivo de consulta">
         <textarea name="mensaje" rows="4" placeholder="Deja tu mensaje..."></textarea>
       </fieldset>
+      <input style="display: none;"name="bot-field" /></label>
       <input type="submit" value="Enviar">
     </form>
     <img src="./img/contacto.png" alt="Contacto">
