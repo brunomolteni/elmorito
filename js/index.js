@@ -151,7 +151,7 @@ const form = $('form');
 const submit = $('input[type=submit]');
 const formSubmit = e => {
   form.classList.add('loading');
-  submit.value = 'Enviando...';
+  submit.value = '...';
   submit.disabled = true;
 
   fetch('/', {

@@ -648,6 +648,9 @@ header{
     left: 75%;
     border: 1px solid #9d6f49;
     cursor: pointer;
+    &[value='Enviado!']{
+      cursor: default;
+    }
   }
   img{
     position: absolute;
