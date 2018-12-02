@@ -1,5 +1,5 @@
-import "../css/styles.scss";
 import "../css/ui.scss";
+import "../css/styles.scss";
 import "../node_modules/basiclightbox/src/styles/main.scss";
 import "../node_modules/plyr/dist/plyr.css"
 import "../node_modules/tiny-slider/src/tiny-slider.scss";
