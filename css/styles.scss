@@ -587,6 +587,10 @@ header{
     position: relative;
     transition-duration: .8s;
     z-index: 1;
+
+    &.loading{
+      background: red;
+    }
   }
   fieldset{
     flex: 1;

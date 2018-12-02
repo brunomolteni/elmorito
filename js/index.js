@@ -4,12 +4,13 @@ import "../node_modules/basiclightbox/src/styles/main.scss";
 import "../node_modules/plyr/dist/plyr.css"
 import "../node_modules/tiny-slider/src/tiny-slider.scss";
 
-import initEmergence from 'emergence.js'; // https://github.com/xtianmiller/emergence.js ANIMACIONES
+import initEmergence from 'emergence.js'; // https://github.com/xtianmiller/emergence.js
 import * as basicLightbox from 'basiclightbox' // https://basiclightbox.electerious.com/
-import Plyr from 'plyr';
-import { tns } from 'tiny-slider';
-import smoothscroll from 'smoothscroll-polyfill';
-
+import Plyr from 'plyr'; // https://github.com/sampotts/plyr
+import { tns } from 'tiny-slider'; // https://github.com/ganlanyuan/tiny-slider
+import smoothscroll from 'smoothscroll-polyfill'; // https://github.com/iamdustan/smoothscroll
+import serialize from './serialize'; // https://vanillajstoolkit.com/helpers/serialize/
+import 'unfetch/polyfill'; // https://github.com/developit/unfetch
 
 // SETUP
 smoothscroll.polyfill();
@@ -107,8 +108,7 @@ const videos = tns({...sliderOptions,
   },
 });
 
-// HANDLERS
-
+// Utils
 function $(selector){
   return document.querySelector(selector);
 }
@@ -117,24 +117,25 @@ function $$(selector){
   return document.querySelectorAll(selector);
 }
 
+// Galleries
 $('#Imagenes-ow').classList.add('active');;
-
 window.show = selector => {
   $('.active').classList.remove('active');
   $(selector).classList.add('active');
 }
 
+// Lightbox
 window.openImage = e => {
   const instance = basicLightbox.create(e.innerHTML);
   instance.show();
 }
-
 window.openVideo = id => {
   let frame = `<iframe width="1024" height="576" src="https://www.youtube.com/embed/${id}?autoplay=1"></iframe>`;
   const instance = basicLightbox.create(frame);
   instance.show();
 }
 
+// Responsive Menu
 const openMenu = () => {
   $('header').classList.add('open');
 }
@@ -144,3 +145,18 @@ const closeMenu = () => {
 
 $$('header nav a, header .close').forEach( el=> el.addEventListener('click',closeMenu));
 $('header .menu').addEventListener('click',openMenu);
+
+// AJAX Form
+const form = $('form');
+const formSubmit = e => {
+  form.classList.add('loading');
+  e.preventDefault();
+  fetch(form.action, {
+    method: 'POST',
+    body: serialize(form)
+  }).then( r => {
+    form.classList.remove('loading')
+    return r.json();
+  }).then( console.log );
+}
+form.addEventListener('submit',formSubmit)
