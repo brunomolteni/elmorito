@@ -148,14 +148,22 @@ $('header .menu').addEventListener('click',openMenu);
 
 // AJAX Form
 const form = $('form');
+const submit = $('input[type=submit]');
 const formSubmit = e => {
   form.classList.add('loading');
-  e.preventDefault();
+  submit.value = 'Enviando...';
+  submit.disabled = true;
+
   fetch('/', {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: serialize(form)
-  }).then(() => alert("Success!"))
-    .catch(error => alert(error));
+  }).then(() => {
+    form.classList.remove('loading');
+    submit.value = 'Enviado!';
+   })
+    .catch(error => alert('Hubo un error, por favor pruebe de nuevo dentro de unos minutos.'));
+
+  e.preventDefault();
 }
 form.addEventListener('submit',formSubmit)

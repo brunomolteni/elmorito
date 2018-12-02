@@ -605,7 +605,9 @@ header{
     z-index: 1;
 
     &.loading{
-      background: red;
+      input[type=submit]{
+        animation: Loading 2s ease infinite;
+      }
     }
   }
   fieldset{
