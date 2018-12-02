@@ -192,12 +192,15 @@ header{
       opacity: 1;
     }
     @media screen and (max-width: 800px){
+      animation: Panning 12s infinite linear;
       &__text{
         margin-right: 0;
         background-color: rgba(0,0,0,0.8);
         width: 100vw;
         text-align: center;
         padding: 20px 0;
+        position: absolute;
+        bottom: 80px;
       }
       &.tns-slide-active .ofrecemos__text{
         transform: translateX(-10vw);
@@ -369,6 +372,7 @@ header{
     li{
       position: relative;
       margin-top: 100px;
+      text-align: center;
 
       @media screen and (max-width: 500px){
         margin-top: 80px;
@@ -392,6 +396,10 @@ header{
     .sans{
       font-size: 0.8rem;
       padding-left: 20%;
+      text-align: left;
+    }
+    .button{
+      font-size: .8rem;
     }
   }
 }
