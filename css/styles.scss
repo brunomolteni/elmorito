@@ -696,6 +696,7 @@ header{
   background-size: cover;
   background-position: center;
   position: relative;
+  min-height: 80vh;
   h2{
     color: white;
   }
@@ -759,7 +760,7 @@ header{
   img{
     position: absolute;
     left: 0;
-    bottom: -10vh;
+    top: 60px;
     width: 30vw;
     transition-duration: .6s;
     z-index: 1;
