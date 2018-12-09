@@ -699,9 +699,6 @@ header{
   min-height: 80vh;
   min-height: calc(100vh - 200px);
 
-  @media screen and (max-width: 700px){
-    min-height: 0;
-  }
   h2{
     color: white;
   }
@@ -831,8 +828,7 @@ header{
       position: static;
       margin: 0 auto;
     }
-  }
-  @media screen and (max-width: 500px){
+
     form{
       padding: 0;
     }
