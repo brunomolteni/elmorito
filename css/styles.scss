@@ -73,6 +73,15 @@ header{
   align-items: center;
   justify-content: space-between;
   z-index: 20;
+  transition-duration: .3s;
+
+  .mobile.onTop &{
+    transform: translateY(-100%);
+
+    nav{
+      opacity: 0;
+    }
+  }
 
   h1{
     margin: 0;
@@ -89,9 +98,12 @@ header{
     align-items: center;
     justify-content: space-between;
     max-width: 50vw;
-  }
-  a{
-    padding: 5px;
+    a{
+      padding: 5px;
+      &.active{
+        color: rgb(206,149,92);
+      }
+    }
   }
   button{
     color: white;
@@ -112,21 +124,21 @@ header{
       right: 0;
       top: 0;
       bottom: 0;
-      padding: 20px;
+      padding: 40px 20px 20px;
       width: 60vw;
       transform: translateX(50vw);
       opacity: 0;
       transition-duration: .6s;
       flex-direction: column;
       justify-content: flex-start;
+      a{
+        margin: 20px;
+        font-size: 1.2rem;
+      }
     }
     &.open nav{
       transform: translateX(0);
       opacity: 1;
-    }
-    a{
-      margin: 20px;
-      font-size: 1.2rem;
     }
     .menu{
       display: block;
@@ -170,12 +182,15 @@ header{
 
 
   .ofrecemos{
-    padding: 30vh 10vw 0;
+    padding: 60px 10vw 0;
     background-image: url('../img/home1-bg.jpg');
     position: relative;
-
+    h3{
+      display: none;
+    }
     &__text{
       margin-right: 65%;
+      margin-top: 35vh;
       transition: transform .6s ease-out,opacity .6s ease-in;
       transform: translateX(-100vw);
       opacity: 0;
@@ -192,7 +207,7 @@ header{
       opacity: 1;
     }
     @media screen and (max-width: 800px){
-      animation: Panning 12s infinite linear;
+      animation: Panning 20s infinite linear;
       &__text{
         margin-right: 0;
         background-color: rgba(0,0,0,0.8);
@@ -225,6 +240,7 @@ header{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       background-color: rgba(241, 217, 189,0.8);
       color: black;
       user-select: none;
@@ -235,6 +251,15 @@ header{
 
       h3{
         color: #9d562f;
+      }
+      p{
+        padding: 0 10px;
+        max-width: 400px;
+      }
+      @media screen and (max-width: 800px){
+        h3 {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -282,6 +307,10 @@ header{
   .galeria{
     padding: 20vh 10vw 0;
     background-image: url('../img/home3-bg.jpg');
+
+    h3 {
+      display: none;
+    }
 
     .tns-controls{
       width: 500px;
@@ -334,6 +363,70 @@ header{
         width: 100%;
         max-width: 480px;
         height: auto;
+      }
+    }
+  }
+  .mobile & {
+    .slider{
+      li{
+        height: 100vh;
+      }
+    }
+    .slider:not(.tns-slider){
+      li{
+        height: 33.4vh;
+        transition: height .4s ease-out;
+        padding: 0;
+        position: relative;
+
+        h3{
+          display: block;
+          position: absolute;
+          top: 15vh;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 1.5rem;
+          color: white;
+        }
+        .gold-bar, img, a, p{
+          display: none;
+        }
+
+        &.active{
+          height: 100vh;
+
+          h3{
+            opacity: 0;
+            transition-duration: .2s;
+          }
+        }
+        &.inactive{
+          height: 0vh;
+        }
+      }
+      .ofrecemos{
+        animation: none;
+
+        &__text{
+          opacity: 1;
+          transform: none;
+          transition: none;
+          top: 0;
+          margin: 0;
+          bottom: 0;
+          background-color: transparent;
+        }
+      }
+      .crianza{
+        &__text{
+          opacity: 1;
+          transform: none;
+          transition: none;
+          top: 0;
+          bottom: 0;
+          background-color: transparent;
+        }
       }
     }
   }
@@ -401,6 +494,9 @@ header{
     .button{
       font-size: .8rem;
     }
+  }
+  .tns-nav{
+    bottom: -2rem;
   }
 }
 // ---------------------

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "git pull && node render && parcel index.html --open",
+    "dev": "parcel index.html --open",
     "build": "node render && parcel build index.html --experimental-scope-hoisting && cpy admin/* dist/admin",
     "parcel": "parcel index.html --open"
   },
@@ -16,6 +17,8 @@
     "basiclightbox": "^5.0.1",
     "cpy-cli": "^2.0.0",
     "emergence.js": "^1.1.2",
+    "ismobilejs": "^0.5.1",
+    "lodash.throttle": "^4.1.1",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-imagemin": "^2.1.1",
     "plyr": "^3.4.7",

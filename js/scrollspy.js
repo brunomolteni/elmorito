@@ -1,22 +1,28 @@
-(function() {
-  'use strict';
+import throttle from 'lodash.throttle';
 
-  var section = document.querySelectorAll(".section");
+
+const spy = function (){
+  var section = document.querySelectorAll("section");
   var sections = {};
-  var i = 0;
 
-  Array.prototype.forEach.call(section, function(e) {
-    sections[e.id] = e.offsetTop;
-  });
-
-  window.onscroll = function() {
+  window.onscroll = throttle(function() {
     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-    for (i in sections) {
-      if (sections[i] <= scrollPosition) {
-        document.querySelector('.active').setAttribute('class', ' ');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-      }
+    if(scrollPosition > 5){
+      document.body.classList.remove('onTop')
+    }else{
+      document.body.classList.add('onTop')
     }
-  };
-})();
+
+    section.forEach( el => sections[el.id] = el.offsetTop - 5 );
+
+    Object.keys(sections).forEach((key,i,arr) => {
+      if(sections[key] < scrollPosition && (!arr[i+1] || sections[arr[i+1]] > scrollPosition )){
+        document.querySelector('nav a.active').classList.remove('active');
+        document.querySelector('nav a[href*=' + key + ']').classList.add('active');
+      }
+    });
+  },200);
+}
+
+export default spy;
