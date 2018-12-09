@@ -697,6 +697,11 @@ header{
   background-position: center;
   position: relative;
   min-height: 80vh;
+  min-height: calc(100vh - 200px);
+
+  @media screen and (max-width: 700px){
+    min-height: 0;
+  }
   h2{
     color: white;
   }
@@ -848,6 +853,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 200px;
 
   div{
     flex: 1;
@@ -879,6 +885,7 @@ footer{
   }
   @media screen and (max-width: 700px){
     flex-direction: column;
+    height: 300px;
 
     div:last-child{
       border: none;
